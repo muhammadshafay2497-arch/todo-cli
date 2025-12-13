@@ -101,7 +101,7 @@ def get_task_id(prompt_text, tasks):
     valid_ids = [task["id"] for task in tasks]
     while True:
         try:
-            task_id_str = Prompt.ask(prompt_text + " (or type 'back' to return)")
+            task_id_str = Prompt.ask(prompt_text + " (or type 'back' to return to the menu)")
             if task_id_str.lower() == 'back':
                 console.print("[yellow]Cancelled.[/yellow]")
                 return None
