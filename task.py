@@ -40,7 +40,7 @@ def add_task(tasks):
         "status": "pending"  # Changed from 'completed'
     }
     tasks.append(new_task)
-    console.print("\n[bold green]✅ Task added successfully![/bold green]")
+    console.print(f"\n[bold green]✅ Task '{escape(title)}' added successfully![/bold green]")
 
 def list_tasks(tasks):
     """
@@ -172,7 +172,7 @@ def update_task(tasks):
     task["description"] = new_description
     task["priority"] = new_priority
     
-    console.print("\n[bold green]✅ Task updated successfully![/bold green]")
+    console.print(f"\n[bold green]✅ Task '{escape(new_title)}' updated successfully![/bold green]")
 
 def delete_task(tasks):
     """
