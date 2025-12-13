@@ -19,7 +19,10 @@ def add_task(tasks):
     Prompts the user for task details and adds a new task to the list.
     """
     console.print("[bold cyan]Add a New Task[/bold cyan]")
-    title = Prompt.ask("Enter Task Title")
+    title = Prompt.ask("Enter Task Title (or type 'back' to return to the menu)")
+    if title.lower() == 'back':
+        console.print("[yellow]Cancelled.[/yellow]")
+        return
     description = Prompt.ask("Enter Task Description (optional)")
     while True:
         priority_input = Prompt.ask("Enter Priority (Low/Medium/High)", default="Medium").lower()
@@ -155,7 +158,10 @@ def update_task(tasks):
 
     console.print(f"Updating task: [bold]{escape(task['title'])}[/bold]. Leave fields blank to keep current values.")
 
-    new_title = Prompt.ask(f"New title", default=task["title"])
+    new_title = Prompt.ask(f"New title (or type 'back' to return to the menu)", default=task["title"])
+    if new_title.lower() == 'back':
+        console.print("[yellow]Cancelled.[/yellow]")
+        return
     new_description = Prompt.ask(f"New description", default=task.get("description", ""))
     while True:
         priority_input = Prompt.ask(
