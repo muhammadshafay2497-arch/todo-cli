@@ -204,7 +204,7 @@ def delete_task(tasks):
         for i, task in enumerate(tasks):
             task["id"] = i + 1
             
-        console.print("\n[bold green]✅ Task deleted and tasks re-numbered successfully![/bold green]")
+        console.print(f"\n[bold green]✅ Task '{escape(task_title)}' deleted and tasks re-numbered successfully![/bold green]")
     else:
         console.print("\n[bold yellow]Task deletion cancelled.[/bold yellow]")
 
