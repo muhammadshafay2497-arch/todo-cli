@@ -101,7 +101,10 @@ def get_task_id(prompt_text, tasks):
     valid_ids = [task["id"] for task in tasks]
     while True:
         try:
-            task_id_str = Prompt.ask(prompt_text)
+            task_id_str = Prompt.ask(prompt_text + " (or type 'back' to return)")
+            if task_id_str.lower() == 'back':
+                console.print("[yellow]Cancelled.[/yellow]")
+                return None
             task_id = int(task_id_str)
             if task_id in valid_ids:
                 return task_id
@@ -121,6 +124,8 @@ def toggle_task_status(tasks):
     list_tasks(tasks)
     console.print("\n[bold cyan]Toggle Task Status[/bold cyan]")
     task_id = get_task_id("Enter the ID of the task to toggle", tasks)
+    if task_id is None:
+        return
     
     # Find the task with the matching ID
     task = next((t for t in tasks if t.get("id") == task_id), None)
@@ -149,6 +154,8 @@ def update_task(tasks):
     list_tasks(tasks)
     console.print("\n[bold cyan]Update a Task[/bold cyan]")
     task_id = get_task_id("Enter the ID of the task to update", tasks)
+    if task_id is None:
+        return
     
     # Find the task with the matching ID
     task = next((t for t in tasks if t.get("id") == task_id), None)
