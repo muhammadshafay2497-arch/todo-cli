@@ -1,0 +1,5 @@
+chore: Update tasks.json with standardized priorities and task status
+
+- Standardized priority values to lowercase.
+- Updated "House Cleaning" task status to "completed".
+- Performed general task management (additions, modifications, deletions).

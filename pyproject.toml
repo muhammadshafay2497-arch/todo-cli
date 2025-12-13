@@ -1,7 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "todo-cli"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = ["rich~=14.2.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]

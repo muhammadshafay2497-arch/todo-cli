@@ -60,6 +60,10 @@ def list_tasks(tasks):
     table.add_column("Description", min_width=20, no_wrap=False)
     table.add_column("Priority", width=10)
 
+    status_styles = {
+        "pending": "bold red",
+        "completed": "bold green",
+    }
     priority_styles = {
         "high": "bold red",
         "medium": "bold yellow",
@@ -71,6 +75,7 @@ def list_tasks(tasks):
         
         # Determine status and row style
         status = task.get("status", "pending")
+        status_style = status_styles.get(status, "white")
         row_style = "dim" if status == "completed" else ""
         
         # Determine priority style
@@ -80,7 +85,7 @@ def list_tasks(tasks):
         try:
             table.add_row(
                 task_id_str,
-                status.capitalize(),
+                f"[{status_style}]{status.capitalize()}[/]",
                 escape(task["title"]),
                 escape(task.get("description", "")),
                 f"[{priority_style}]{escape(priority.capitalize())}[/]",

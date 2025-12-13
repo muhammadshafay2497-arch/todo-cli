@@ -1,29 +1,22 @@
 [
     {
         "id": 1,
-        "title": "Slapping my friend",
-        "description": "Love to slap my friend",
-        "priority": "medium",
+        "title": "Kicking my friend",
+        "description": "Did wrong thing",
+        "priority": "low",
         "status": "pending"
     },
     {
         "id": 2,
-        "title": "Completing Hackathon",
-        "description": "Deadline 15th December",
+        "title": "House Cleaning",
+        "description": "Mom's Instructions",
         "priority": "high",
         "status": "completed"
     },
     {
         "id": 3,
-        "title": "Exercise",
-        "description": "For maintaining physical and mental health",
-        "priority": "High",
-        "status": "completed"
-    },
-    {
-        "id": 4,
-        "title": "House Cleaning",
-        "description": "Mom Said Strictly",
+        "title": "Excercise",
+        "description": "Health Fitness",
         "priority": "high",
         "status": "completed"
     }
