@@ -3,14 +3,14 @@
         "id": 1,
         "title": "Slapping my friend",
         "description": "Love to slap my friend",
-        "priority": "Medium",
+        "priority": "medium",
         "status": "pending"
     },
     {
         "id": 2,
         "title": "Completing Hackathon",
         "description": "Deadline 15th December",
-        "priority": "High",
+        "priority": "high",
         "status": "completed"
     },
     {
@@ -22,16 +22,9 @@
     },
     {
         "id": 4,
-        "title": "Car cleaning",
-        "description": "For my Desires",
-        "priority": "medium",
-        "status": "completed"
-    },
-    {
-        "id": 5,
         "title": "House Cleaning",
         "description": "Mom Said Strictly",
         "priority": "high",
-        "status": "pending"
+        "status": "completed"
     }
 ]
