@@ -23,7 +23,14 @@ def add_task(tasks):
     if title.lower() == 'back':
         console.print("[yellow]Cancelled.[/yellow]")
         return
+    # If title is empty, set default to "Task"
+    if not title:
+        title = "Task"
+
     description = Prompt.ask("Enter Task Description (optional)")
+    # If description is empty, set default to "-"
+    if not description:
+        description = "-"
     while True:
         priority_input = Prompt.ask("Enter Priority (Low/Medium/High)", default="Medium").lower()
         if priority_input in ["low", "medium", "high"]:
