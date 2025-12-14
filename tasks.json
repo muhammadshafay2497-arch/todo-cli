@@ -1,23 +1,23 @@
 [
     {
         "id": 1,
-        "title": "Kicking my friend",
-        "description": "Did wrong thing",
-        "priority": "low",
-        "status": "pending"
-    },
-    {
-        "id": 2,
-        "title": "House Cleaning",
+        "title": "Cleaning House",
         "description": "Mom's Instructions",
         "priority": "high",
         "status": "completed"
     },
     {
-        "id": 3,
-        "title": "Excercise",
-        "description": "Health Fitness",
-        "priority": "high",
+        "id": 2,
+        "title": "Exercise",
+        "description": "Gym",
+        "priority": "medium",
         "status": "completed"
+    },
+    {
+        "id": 3,
+        "title": "Games",
+        "description": "Badminton",
+        "priority": "low",
+        "status": "pending"
     }
 ]

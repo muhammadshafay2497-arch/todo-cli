@@ -88,7 +88,7 @@ def search_tasks_by_term(tasks):
     Prompts the user for a search term and displays matching tasks.
     """
     console.print("[bold cyan]Search Tasks[/bold cyan]")
-    search_term = Prompt.ask("Enter the search term")
+    search_term = Prompt.ask("Enter task title")
     found_tasks = search_tasks(tasks, search_term)
     if found_tasks:
         list_tasks(found_tasks)

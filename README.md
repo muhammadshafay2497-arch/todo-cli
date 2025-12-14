@@ -22,6 +22,11 @@ python main.py
 
 *   Rich library for better UI
 *   Data saved in a `tasks.json` file
+*   Search tasks by keyword.
+* Filter:
+    * Show only completed tasks.
+    * Show only pending tasks.
+    * Show only Priority ( Low/Medium/High ) tasks.
 
 ## How I used Gemini CLI
 

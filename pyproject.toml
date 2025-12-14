@@ -5,10 +5,19 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "todo-cli"
 version = "0.1.0"
+authors = [
+    { name = "Shafay", email = "shafay@example.com" }
+]
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
+license = "MIT"
 dependencies = ["rich~=14.2.0"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
 
 [tool.setuptools.packages.find]
 where = ["."]
